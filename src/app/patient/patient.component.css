@@ -1,0 +1,22 @@
+.displayPatients {
+    background-color: white; 
+    color: black;
+    
+    border: 1px solid blue;
+}
+
+.example-full-width {
+    display: block;
+    border: 1px solid black;
+    display: inline-block;
+    width: 500px;
+}
+
+.d-p-label {
+    width: 150px;
+}
+
+.d-p-textbox {
+    width: 300px;
+    display: inline-block;
+}

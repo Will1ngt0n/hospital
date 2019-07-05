@@ -1,0 +1,19 @@
+.larger-width {
+    width: 200px;
+    margin: 0px 0px 0px 20px;
+}
+
+#first-field {
+    margin-top: 10px
+}
+
+#input-container{
+    margin: auto;
+    border: 1px solid rgb(228, 137, 137);
+    
+}
+
+.divPatient {
+    display: inline-block;
+    width: 200px;
+}

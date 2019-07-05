@@ -1,0 +1,72 @@
+.displayPatients {
+    background-color: white; 
+    color: black;
+    
+    border: 1px solid blue;
+}
+
+.example-full-width {
+ 
+    border: 1px solid black;
+    display: inline-block;
+    width: 500px;
+}
+
+.d-p-label {
+    width: 150px;
+}
+
+.d-p-textbox {
+    width: 300px;
+    display: inline-block;
+}
+
+.card {
+    margin: auto;
+    width: 1200px;
+}
+
+.labels {
+    display: inline-block;
+}
+
+.IDN {
+    width: 150px;
+}
+
+.firstName {
+    width: 150px;
+}
+
+.lastName {
+    width: 150px;
+}
+
+.age {
+    width: 50px;
+}
+
+.contactNumber {
+    width: 150px;
+}
+
+.container {
+    padding: 5px;
+}
+
+.meToo {
+    display: inline-block;
+}
+
+.patientButtons {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 20px;
+}
+
+/*
+button[mat-raised-button] {
+  
+    
+}
+*/

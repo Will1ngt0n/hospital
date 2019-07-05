@@ -1,0 +1,54 @@
+<!-- Searching array items       -->
+<mat-form-field class="example-full-width larger-width">
+                              
+        <input style="display: inline-block; width: 400px;" matInput placeholder="Search patients:" ><button mat-raised-button (click)="searchItems()">Search</button>
+  
+</mat-form-field>
+
+
+
+<mat-card style="width: 500px; margin: auto; margin-top: 10px">
+        <div id="input-container">
+                <div>
+                        
+                            <mat-form-field styleid="first-field" class="example-full-width larger-width">
+                             
+                                <input matInput value="First name:" class="displayPatients d-p-label"><input matInput value="{{patients.firstName}}" class="displayPatients d-p-textbox" disabled>
+                              
+                            </mat-form-field><br/>
+                
+                            <mat-form-field class="example-full-width larger-width">
+                              
+                                    <input matInput value="Last name:" class="displayPatients d-p-label"><input matInput value="{{patients.lastName}}" class="displayPatients d-p-textbox" disabled>
+                              
+                            </mat-form-field><br/>
+                
+                            <mat-form-field class="example-full-width larger-width">
+                              
+                                    <input matInput value="Age:" class="displayPatients d-p-label"><input matInput value="{{patients.age}}" class="displayPatients d-p-textbox" disabled>
+                              
+                            </mat-form-field><br/>
+                
+                            <mat-form-field class="example-full-width larger-width">
+                              
+                                    <input matInput value="ID number:" class="displayPatients d-p-label"><input matInput value="{{patients.IDNum}}" class="displayPatients d-p-textbox" disabled>
+                              
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width larger-width">
+                              
+                                <input matInput value="Contact number:" class="displayPatients d-p-label"><input matInput value="{{patients.contactNumber}}" class="displayPatients d-p-textbox" disabled>
+                        </mat-form-field>
+                    
+                </div>
+            
+        </div>
+        
+    </mat-card>
+
+
+<div *ngIf="patientArray.searchFor">
+    {{queryKey}}
+</div>
+
+
+<button mat-raised-button color="primary" routerLink="/admin">Back</button>

@@ -1,0 +1,21 @@
+<mat-card class="card">
+       <div class="container">
+            <div class="labels IDN">Identity number</div>
+            <div class="labels firstName">First names</div>
+            <div class="labels lastName">Lastname</div>
+            <div class="labels age">Age</div>
+            <div class="labels contactNumber">Contact number</div>
+       </div> 
+    <div *ngFor="let x of patients">
+        <!-- The list with all arrays  -->
+        <div class="container meToo" [routerLink]="['/appointments', x.IDNum]">
+                <input disabled matInput value="{{x.IDNum}}" class="displayPatients d-p-textbox labels IDN">
+                <input disabled matInput value="{{x.firstName}}" class="displayPatients d-p-textbox labels firstName">
+                <input disabled matInput value="{{x.lastName}}" class="displayPatients d-p-textbox labels lastName">
+                <input disabled matInput value="{{x.age}}" class="displayPatients d-p-textbox labels age">
+                <input disabled matInput value="{{x.contactNumber}}" class="displayPatients d-p-textbox labels contactNumber">
+        </div>
+        <button class="patientButtons" mat-raised-button color="primary">Edit</button>
+        <button mat-raised-button color="primary">Add appointment</button>
+    </div>
+</mat-card>

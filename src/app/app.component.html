@@ -1,0 +1,10 @@
+<mat-button-toggle-group style="margin-bottom: 5px;">
+  <mat-button-toggle routerLink="{{x.path}}" *ngFor="let x of List" value="left" aria-label="Text align left">
+   {{x.ComponentName}}
+  </mat-button-toggle>
+ 
+
+</mat-button-toggle-group>
+
+<mat-divider></mat-divider>
+<router-outlet></router-outlet>

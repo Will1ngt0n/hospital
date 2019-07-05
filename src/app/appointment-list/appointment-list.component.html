@@ -1,0 +1,98 @@
+
+    {{patient.IDNum}}
+{{patient.firstName}}
+{{patient.lastName}}
+{{patient.age}}
+
+
+
+<div *ngIf = "patientApppointment != null ">
+    <span>{{patientAppointment.patientName}}</span>
+    <span>{{patientAppointment.patientName}}</span>
+</div>
+<!-- 
+
+<div *ngIf="patientApppointmentExists == true">
+        {{patientAppointment.patientName}}
+
+        <!-{{patientAppointment.dateAppointmentSet}}
+        {{patientAppointment.appointmentDoctor}} ->
+        
+</div>
+-->
+
+<div *ngIf="!patientAppointment" id="noAppDiv">
+    <h2>No appointment set yet</h2>
+    <button mat-raised-button color="primary" (click)="addAppointment();">Add appointment</button>
+    <div *ngIf="addAppointmentBoolean">
+        <mat-card style="width: 500px; margin: auto; margin-top: 10px">
+            <div id="input-container">
+
+                <!--
+                <form [formGroup]="patientAddForm">
+                    <mat-form-field class="example-full-width larger-width">
+                        <input matInput [disabled] class="disabled-input" placeholder="ID number" formControlName="IDNumber" [(ngModel)]="IDNumber" maxlength="13">
+                    </mat-form-field><br/>
+                    <mat-form-field class="example-full-width larger-width">
+                        <input matInput [disabled] class="disabled-input" placeholder="Last name" formControlName="lastName" [(ngModel)]="lastName">
+                    </mat-form-field><br/>
+                    <mat-form-field id="first-field" class="example-full-width larger-width">
+                        <input matInput [disabled] class="disabled-input" placeholder="First name" formControlName="firstName" [(ngModel)]="firstName">
+                    </mat-form-field><br/>
+                    <mat-form-field class="example-full-width larger-width">
+                        <input matInput [disabled] class="disabled-input" placeholder="Age" formControlName="age" [(ngModel)]="age" maxlength="2">
+                    </mat-form-field><br/>
+                    <mat-form-field class="example-full-width larger-width">
+                        <input matInput class="disabled-input" placeholder="Appointment date" formControlName="appointmentDate" [(ngModel)]="appointmentDate">
+                    </mat-form-field><br/>
+                    <mat-form-field class="example-full-width larger-width">
+                        <input matInput class="disabled-input" placeholder="Date appointment set" formControlName="dateAppointmentSet" [(ngModel)]="dateAppointmentSet">
+                    </mat-form-field><br/>
+                    <mat-form-field class="example-full-width larger-width">
+                        <input matInput class="disabled-input" placeholder="Doctor" formControlName="appointmentDoctor" [(ngModel)]="appointmentDoctor">
+                    </mat-form-field>
+                </form>
+                <button mat-raised-button color="primary"  (click)="addPatient(firstName, lastName, age, IDNumber, contactNumber)">Add appointment</button>
+            -->
+            
+                        <mat-form-field class="example-full-width larger-width">
+                            <input matInput [disabled] class="disabled-input" placeholder="ID number" [(ngModel)]="patient.IDNum" maxlength="13">
+                        </mat-form-field><br/>
+                        <mat-form-field class="example-full-width larger-width">
+                            <input matInput [disabled] class="disabled-input" placeholder="Last name" [(ngModel)]="patient.lastName">
+                        </mat-form-field><br/>
+                        <mat-form-field id="first-field" class="example-full-width larger-width">
+                            <input matInput [disabled] class="disabled-input" placeholder="First name" [(ngModel)]="patient.firstName">
+                        </mat-form-field><br/>
+                        <mat-form-field class="example-full-width larger-width">
+                            <input matInput [disabled] class="disabled-input" placeholder="Age" [(ngModel)]="patient.age" maxlength="2">
+                        </mat-form-field><br/>
+                        <mat-form-field class="example-full-width larger-width">
+                            <input matInput class="disabled-input" placeholder="Appointment date" [(ngModel)]="appointmentDate">
+                        </mat-form-field><br/>
+                        <mat-form-field class="example-full-width larger-width">
+                            <input matInput class="disabled-input" placeholder="Date appointment set" [(ngModel)]="dateAppointmentSet">
+                        </mat-form-field><br/>
+                        <mat-form-field class="example-full-width larger-width">
+                            <input matInput class="disabled-input" placeholder="Doctor" [(ngModel)]="appointmentDoctor">
+                        </mat-form-field><br/>
+                    
+                    <button mat-raised-button color="primary"  (click)="saveAppointment(patient.IDNum, patient.lastName, patient.firstName, patient.age, appointmentDate, dateAppointmentSet, appointmentDoctor)">Save appointment</button>
+            </div>
+            
+        </mat-card >
+    </div>
+</div>
+
+<div *ngIf="patientAppointment" id="noAppDiv">
+    High
+    <span>{{patientAppointment.patientID}}</span>
+    <span>{{patientAppointment.patientName}}</span>
+    <span>{{patientAppointment.patientSurname}}</span>
+    <span>{{patientAppointment.patientAge}}</span>
+    <span>{{patientAppointment.appointmentDate}}</span>
+    <span>{{patientAppointment.dateAppointmentSet}}</span>
+    <span>{{patientAppointment.appointmentDoctor}}</span>
+   
+</div>
+

@@ -1,0 +1,53 @@
+
+<mat-card style="width: 500px; margin: auto; margin-top: 10px">
+    <div id="input-container">
+        <form [formGroup]="patientAddForm">
+            <mat-form-field id="first-field" class="example-full-width larger-width">
+                <input matInput placeholder="First name" formControlName="firstName" [(ngModel)]="firstName">
+            </mat-form-field><br/>
+
+            <mat-form-field class="example-full-width larger-width">
+                <input matInput placeholder="Last name" formControlName="lastName" [(ngModel)]="lastName">
+            </mat-form-field><br/>
+
+            <mat-form-field class="example-full-width larger-width">
+                <input matInput placeholder="Age" formControlName="age" [(ngModel)]="age" maxlength="2">
+            </mat-form-field><br/>
+
+            <mat-form-field class="example-full-width larger-width">
+                <input matInput placeholder="ID number" formControlName="IDNumber" [(ngModel)]="IDNumber" maxlength="13" (keyup)="inputIDFn(IDNumber)">
+            </mat-form-field><br/>
+            <mat-form-field class="example-full-width larger-width">
+                <input matInput placeholder="Contact number" formControlName="contactNumber" [(ngModel)]="contactNumber" maxlength="10">
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" [disabled]="continue==false || !patientAddForm.valid" (click)="addPatient(firstName, lastName, age, IDNumber, contactNumber)">Add patient</button>
+    </div>
+    
+</mat-card >
+<br/>
+
+<mat-card style="background-color: rgb(238, 237, 237)">
+    <div>Patients</div>
+    <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<div class="divPatient">ID Number</div>
+    <!--<div class="divPatient">First Name</div>
+    <div class="divPatient">Last Name</div>
+    <div class="divPatient">Age</div> -->
+    <mat-list *ngFor="let x of patientsArray">
+        <mat-list-item [routerLink]="['/patient', x.IDNum] " >
+            
+               
+            <div class="divPatient">{{x.IDNum}}</div>
+           <!--<div class="divPatient">{{x.firstName}}</div>
+            <div class="divPatient">{{x.lastName}}</div>
+            <div class="divPatient">{{x.age}}</div> --> 
+            
+        </mat-list-item>
+    </mat-list>
+</mat-card>
+
+{{findItem}}
+<div *ngIf="patientsList.searchFor">
+    {{searched}}
+</div>
